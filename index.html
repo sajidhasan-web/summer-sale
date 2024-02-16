@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <header>
+    <header id="header">
       <section class="w-full mx-auto bg-[#F9F6E2] p-14">
         <div class="md:flex items-center justify-center">
           <div class="mr-12">
@@ -38,7 +38,7 @@
       </section>
     </header>
     <main>
-      <section>
+      <section id="main-content" class="">
         <div
           class="max-w-full mx-auto grid grid-cols-1 lg:grid-cols-5 gap-5 px-20 bg-slate-50 cursor-pointer"
         >
@@ -459,7 +459,7 @@
                   Total: $<span id="total"></span>
                 </p>
                 <hr class="my-4" />
-                <button class="btn btn-wide bg-[#F11A7B] text-white">
+                <button onclick="my_modal_4.showModal()" class="btn btn-wide bg-[#F11A7B] text-white">
                   Make Purchase
                 </button>
               </div>
@@ -467,9 +467,26 @@
           </div>
         </div>
       </section>
+      <!-- congratulation section -->
+      <section>
+        <!-- You can open the modal using ID.showModal() method -->
+
+        <dialog id="my_modal_4" class="modal">
+          <div class=" bg-white rounded-lg flex flex-col items-center gap-6 p-24">
+            <img src="./Images/tick 1.svg" alt="">
+            <h2 class="text-5xl font-bold">Congratulation</h2>
+            <p class="text-xl font-normal text-[#11111180]">Your Purchase the product</p>
+            <button class="btn btn-primary text-xl text-white bg-[#E527B2] border-none">Go Home</button>
+          </div>
+        </dialog>
+         
+      </section>
     </main>
 
     <script src="./script.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
+
+
+

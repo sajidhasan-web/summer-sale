@@ -42,16 +42,23 @@ for(let card of cards){
     }
     
     
-    
+    // promo code apply btn function
         
         function applyBtn(){
             const inputField = document.getElementById('input-field')
             const value = inputField.value
+            const inputValue = 'SELL200'
+            
             
             if(totalPrice >= 200){
-                if(value == 'SELL200'){
+                if(value == inputValue ){
                     const discountPrice =  totalPrice * 0.2
-                    console.log(discountPrice)
+                    const discountDisplay = document.getElementById('discountPrice')
+                    discountDisplay.innerText = discountPrice.toFixed(2)
+                    const total = totalPrice - discountPrice
+                    const totalDisplay = document.getElementById('total')
+                    totalDisplay.innerText = total
+                    inputField.value = ''
                  
                   }else{
                       alert('provide the valid promo code!')
@@ -60,6 +67,10 @@ for(let card of cards){
             else{
                 alert('vai 200 er beshi khoros koren!')
             }
+        } 
+
+        function goHome(){
+            document.querySelector('dialog').removeAttribute('id','my_modal_4')
         }
     
     

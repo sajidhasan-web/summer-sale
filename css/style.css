@@ -4,3 +4,8 @@
   margin: 0;
   font-family: Work sans-serif;
 }
+
+
+.bg-makePurchase {
+  background-color: rgba(17, 17, 17, 0.40);
+}
